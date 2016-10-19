@@ -1,3 +1,10 @@
 img {
 	max-width: 200px;
 }
+.navbar-no-bottom-margin {
+	margin-bottom: 0px;
+}
+
+footer .navbar-default {
+	background: transparent;
+}
