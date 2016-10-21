@@ -47,6 +47,43 @@ header .navbar-default .navbar-nav .active a:hover {
 	text-shadow: none;
 }
 
+/*Navbar Brand*/
+
+header .navbar-brand {
+	background: url('../images/wisdompetlogo.svg');
+	background-repeat: no-repeat;
+	background-position: 15px 0;
+	height: auto;
+}
+header .navbar-brand h1 {
+	color: white;
+	margin: 0;
+	font-size: 1.8em;
+	font-weight: 400;
+	padding-left: 105px;
+}
+header .navbar-brand span.subhead {
+	display: block;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 0.6em;
+	font-weight: 100;
+}
+
+/*Navbar toggle*/
+
+header .nav-toggle {
+	background-color: #279182;
+}
+header .navbar-default .nav-toggle .icon-bar {
+	background-color: white;
+}
+@media only screen and (max-width: 768px) {
+	header .navbar-collapse.in {
+		background-color: rgba(0, 0, 0, 0.5);;
+	}
+}
+
+
 .page	{
 	padding: 50px 0;
 }
