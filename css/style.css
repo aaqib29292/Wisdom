@@ -110,6 +110,49 @@ header .inbody .navbar-brand span.subhead {
   display: none;
 }
 
+/**  Carousel Fade **/
+
+.carousel.fade {
+  opacity: 1;
+}
+
+.carousel.fade .item {
+  transition: opacity ease-out .7s;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+
+.carousel.fade .item:first-child {
+  top: auto;
+  opacity: 0;
+  position: relative;
+}
+
+.carousel.fade .item.active {
+  opacity: 1;
+}
+
+.carousel-control {
+  opacity: 0;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+
+#featured .item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
 /* Page */
 
 .page	{
@@ -135,7 +178,7 @@ header .inbody .navbar-brand span.subhead {
 }
 #services img.icon {
 	display: block;
-	width: 80px;
+	width: 125px;
 	margin: 0 auto;
 	margin-bottom: 5px;
 }
@@ -162,6 +205,11 @@ header .inbody .navbar-brand span.subhead {
   font-size: 1.2em;
   color: #6F4E36;
   padding-bottom: 5px;
+}
+@media only screen and (min-width: 450px) and (max-width: 768px) {
+	.doctor h3 {
+		text-align: center;
+	}
 }
 .doctor p {
   font-size: .8em;
@@ -221,6 +269,7 @@ header .inbody .navbar-brand span.subhead {
   font-size: 1.2em;
   line-height: 110%;
   font-weight: 400;
+	cursor: pointer;
 }
 
 

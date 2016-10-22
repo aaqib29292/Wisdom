@@ -46,12 +46,11 @@ $(document).ready(function () {
 
   // carousel
 
-  $('#featured').carousel({
-    interval: false
-  });
-
   var slideqty = $('#featured .item').length;
   var randSlide = Math.floor(Math.random()*slideqty);
+
+  $('#featured .item').eq(randSlide).addClass('active');
+
 
   for (var i=0; i < slideqty; i++) {
     var insertText = '<li data-target="#featured" data-slide-to="' + i + '"';
@@ -62,5 +61,24 @@ $(document).ready(function () {
     $('#featured ol').append(insertText);
   }
 
+  var wheight = $(window).height(); //get the height of the window
+  $('.fullheight').css('height', wheight); //set to window tallness
+
+  //replace IMG inside carousels with a background image
+  $('#featured .item img').each(function() {
+    var imgSrc = $(this).attr('src');
+    $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    $(this).remove();
+  });
+
+  //adjust height of .fullheight elements on window resize
+  $(window).resize(function() {
+    wheight = $(window).height(); //get the height of the window
+    $('.fullheight').css('height', wheight); //set to window tallness
+  });
+
+  $('.carousel').carousel({
+    pause: false
+  });
 
 });
